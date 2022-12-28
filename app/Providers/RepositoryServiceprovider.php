@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use App\Repository\IQuoteRepository;
-use App\Repository\QuoteRepository;
+use App\Repository\QuoteRepositoryFile;
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceprovider extends ServiceProvider
@@ -15,7 +15,7 @@ class RepositoryServiceprovider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(IQuoteRepository::class,QuoteRepository::class);
+        $this->app->bind(IQuoteRepository::class,QuoteRepositoryFile::class);
     }
 
     /**
